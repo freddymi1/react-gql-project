@@ -1,0 +1,36 @@
+import React, { useState } from 'react'
+
+export default () => {
+  const [email, setEmail] = useState('')
+  const [phoneNumber, setPhoneNumber] = useState('')
+
+  return (
+    <>
+      <div className='w-full pt-8 space-y-4'>
+          <label className="text-xl pb-4 text-gray-500">
+            Ton adresse email : *
+          </label>
+          <input
+            className='w-full h-16 text-lg font-bold text-gray-500 border-b-2 border-gray-400 bg-transparent mt-2 outline-none focus:outline-none'
+            type='email'
+            placeholder="Répondez ici..."
+            onChange={e => setEmail(e.target.value)}
+            value={email}
+          />
+      </div>
+      <div className='w-full pt-8 space-y-4'>
+          <label className="text-xl pb-4 text-gray-500">
+            Ton numero telephone : *
+          </label>
+          <input
+            className='w-full h-16 text-lg font-bold text-gray-500 pl-4 border-b-2 border-gray-400 bg-transparent mt-2 outline-none focus:outline-none'
+            type='number'
+            placeholder="Répondez ici..."
+            onChange={e => setPhoneNumber(e.target.value)}
+            value={phoneNumber}
+          />
+      </div>
+      
+    </>
+  )
+}
